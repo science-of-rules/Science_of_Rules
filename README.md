@@ -4,6 +4,18 @@ Source code and assets for reproducing the **Science of Rules** website: an ongo
 
 All page content, templates, styles, scripts, portraits, and available research figures required to build the website are included in this repository. The build uses **Python 3.9+ and its standard library**; no additional packages or research datasets are required. Unverified dates or unavailable material are explicitly marked TODO.
 
+## Dashboard
+
+The dashboard is a single HTML file in the `review/` directory of this repository:
+
+```text
+Science_of_Rules/                          (repository root)
+└── review/
+    └── science-of-rules-dashboard.html    (dashboard)
+```
+
+Open [`review/science-of-rules-dashboard.html`](review/science-of-rules-dashboard.html) on GitHub and use **Download raw file**, or clone the repository, then open the file in a web browser. It contains the website's six sections, and its images, styles, and scripts are embedded, so viewing it needs no build, server, or internet connection.
+
 ## Reproduce the website
 
 ```bash
@@ -31,7 +43,7 @@ The private repository requires GitHub access. On Windows, use `py` in place of 
 | `ASSET_SOURCES.json` | Image sources, credits, and provenance |
 | `docs/MAINTENANCE.md` | Content editing and maintenance instructions |
 
-Edit these source files, then rebuild and validate. Generated `dist/` and `review/` files are recreated from the tracked sources and excluded from Git, except the standalone dashboard described below.
+Edit these source files, then rebuild and validate. Generated `dist/` and `review/` files are recreated from the tracked sources and excluded from Git, except the dashboard `review/science-of-rules-dashboard.html` (see [Dashboard](#dashboard)).
 
 ## Create a portable copy
 
@@ -41,6 +53,6 @@ After building, run:
 python3 scripts/package_review.py
 ```
 
-This writes a ZIP of the website to `review/science-of-rules-local-preview.zip` and a standalone HTML copy with embedded assets to `review/science-of-rules-dashboard.html`. The standalone dashboard is committed so it can be downloaded from GitHub and opened offline in a browser; rerun this step and commit the refreshed file together with any source change.
+This writes a ZIP of the website to `review/science-of-rules-local-preview.zip` (not tracked) and the dashboard to `review/science-of-rules-dashboard.html` (tracked; see [Dashboard](#dashboard)). Rerun this step and commit the refreshed dashboard together with any source change so that it matches the sources.
 
 Optional browser checks use `python3 scripts/browser_check.py` and additionally require Playwright and Chromium. The collaboration form prepares an email draft for the visitor to review and send. Hosting and automatic deployment are not configured.
