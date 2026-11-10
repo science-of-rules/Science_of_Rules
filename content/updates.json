@@ -1,5 +1,30 @@
 [
   {
+    "id": "kickoff-meeting-2026",
+    "category": "Meeting",
+    "date": "2026-11-09",
+    "date_precision": "day",
+    "title": "The Science of Rules team holds its kickoff meeting",
+    "summary": "Science of Rules researchers meet for the project kickoff.",
+    "link": "project.html",
+    "link_label": "About the project",
+    "source_url": null,
+    "source_note": "Meeting date provided by the project team on 2026-11-09; there is no public meeting page."
+  },
+  {
+    "id": "cricket-pnas-acceptance-2026",
+    "category": "Journal acceptance",
+    "date": "2026-11-05",
+    "date_precision": "day",
+    "title": "Three Centuries of the Laws of Cricket Reveal Core Principles of the Evolution of Regulatory Mechanisms — accepted for publication in PNAS.",
+    "summary": "The arXiv preprint on nearly three centuries of cricket’s Laws is accepted for publication in the Proceedings of the National Academy of Sciences (PNAS).",
+    "link": "https://arxiv.org/abs/2607.05586",
+    "link_label": "arXiv preprint",
+    "research_link": "research.html#cricket-regulatory-evolution",
+    "source_url": null,
+    "source_note": "Acceptance date provided by the project team on 2026-11-09. Add the PNAS article link and update content/publications.json when the paper is published."
+  },
+  {
     "id": "grand-quest",
     "category": "Project announcement",
     "date": null,

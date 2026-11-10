@@ -162,7 +162,7 @@ def news_page(items):
         date = f'<time datetime="{e(item["date"])}">{e(item["date"])}</time>' if item.get('date') else '<span class="news-date-todo">TODO: date</span>'
         if item.get('date_end'):
             date += f'<span aria-hidden="true"> – </span><time datetime="{e(item["date_end"])}">{e(item["date_end"])}</time>'
-        source = link(item['link'],item.get('link_label') or 'Details','news-link',True) if item.get('link') else '<span class="todo-note">TODO: source link</span>'
+        source = link(item['link'],item.get('link_label') or 'Details','news-link',item['link'].startswith(('http://','https://'))) if item.get('link') else '<span class="todo-note">TODO: source link</span>'
         research = link(item['research_link'],'Research','news-link') if item.get('research_link') else ''
         entries += f'<li class="news-entry" id="{e(item["id"])}"><div class="news-date">{date}</div><p class="news-summary"><span class="news-category">{e(item["category"])}</span>{e(item["title"])} <span class="news-links">{source}{research}</span></p></li>'
     return intro('News', 'News & milestones.', 'Workshops, awards, publications, and updates from our shared research. Explore Research for the ideas and findings behind the papers.') + f'<section class="section wrap"><ul class="news-list">{entries}</ul></section>'
