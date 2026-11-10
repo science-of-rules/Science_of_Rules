@@ -1,5 +1,6 @@
 /dist/
-/review/
+/review/*
+!/review/science-of-rules-dashboard.html
 __pycache__/
 *.pyc
 .DS_Store

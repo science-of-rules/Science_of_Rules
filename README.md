@@ -31,7 +31,7 @@ The private repository requires GitHub access. On Windows, use `py` in place of 
 | `ASSET_SOURCES.json` | Image sources, credits, and provenance |
 | `docs/MAINTENANCE.md` | Content editing and maintenance instructions |
 
-Edit these source files, then rebuild and validate. Generated `dist/` and `review/` files are excluded from Git and recreated from the tracked sources.
+Edit these source files, then rebuild and validate. Generated `dist/` and `review/` files are recreated from the tracked sources and excluded from Git, except the standalone dashboard described below.
 
 ## Create a portable copy
 
@@ -41,6 +41,6 @@ After building, run:
 python3 scripts/package_review.py
 ```
 
-This writes a ZIP of the website to `review/science-of-rules-local-preview.zip` and a standalone HTML copy with embedded assets to `review/science-of-rules-dashboard.html`.
+This writes a ZIP of the website to `review/science-of-rules-local-preview.zip` and a standalone HTML copy with embedded assets to `review/science-of-rules-dashboard.html`. The standalone dashboard is committed so it can be downloaded from GitHub and opened offline in a browser; rerun this step and commit the refreshed file together with any source change.
 
 Optional browser checks use `python3 scripts/browser_check.py` and additionally require Playwright and Chromium. The collaboration form prepares an email draft for the visitor to review and send. Hosting and automatic deployment are not configured.

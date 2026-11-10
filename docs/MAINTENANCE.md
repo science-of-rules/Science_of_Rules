@@ -53,4 +53,4 @@ Store portraits in `assets/portraits/` and original paper figures in `assets/res
 
 Never substitute an invented chart for an unavailable paper figure. Use `figure: null` with a clear `figure_todo` until the original asset and its source can be confirmed. Layout and behavior live in `templates/base.html`, `assets/site.css`, `assets/site.js`, and `assets/dashboard.js`.
 
-Generated previews, local review notes, and local environment files are excluded by `.gitignore`. The repository contains the site sources; hosting and automatic deployment are not configured.
+Generated previews, local review notes, and local environment files are excluded by `.gitignore`. The exception is `review/science-of-rules-dashboard.html`, which is committed so collaborators can download the dashboard; after any source change, run `python scripts/package_review.py` and commit the refreshed file. The repository contains the site sources and that dashboard; hosting and automatic deployment are not configured.
